@@ -23,12 +23,13 @@ jobs:
         run: packwiz modrinth export -o release.mrpack
 
       - name: Upload to Modrinth
-        uses: Kirstein/modrinth-upload@v1.2
+        uses: modrinth/minotaur@v2
         with:
           token: ${{ secrets.MODRINTH_TOKEN }}
-          project-id: "DEINE_MODRINTH_PROJECT_ID" # Zu finden in den Projekt-Einstellungen auf Modrinth
-          version-number: ${{ github.event.release.tag_name }}
-          version-name: "Release ${{ github.event.release.tag_name }}"
+          project-id: "kUYTdD3h"
           file: release.mrpack
-          game-versions: "26.2" # Unterstützte MC-Version
-          loaders: "fabric" # Unterstützter Loader
+          name: ${{ github.event.release.name }}
+          version-number: ${{ github.event.release.tag_name }}
+          game-versions: "26.2"
+          loaders: "fabric"
+          version-type: ${{ github.event.release.prerelease && 'beta' || 'release' }}
