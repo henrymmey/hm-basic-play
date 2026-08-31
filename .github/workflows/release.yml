@@ -25,8 +25,8 @@ jobs:
       - name: Upload to Modrinth
         uses: Kira-NT/mc-publish@v3
         with:
-          token: ${{ secrets.MODRINTH_TOKEN }}
-          project: "kUYTdD3h"
+          modrinth-id: kUYTdD3h
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
           name: ${{ github.event.release.name }}
           version: ${{ github.event.release.tag_name }}
           version-type: ${{ github.event.release.prerelease && 'beta' || 'release' }}
