@@ -23,13 +23,13 @@ jobs:
         run: packwiz modrinth export -o release.mrpack
 
       - name: Upload to Modrinth
-        uses: modrinth/minotaur@v2.9.0
+        uses: Kira-NT/mc-publish@v3
         with:
           token: ${{ secrets.MODRINTH_TOKEN }}
-          project-id: "kUYTdD3h"
-          file: release.mrpack
+          project: "kUYTdD3h"
           name: ${{ github.event.release.name }}
-          version-number: ${{ github.event.release.tag_name }}
-          game-versions: "26.2"
-          loaders: "fabric"
+          version: ${{ github.event.release.tag_name }}
           version-type: ${{ github.event.release.prerelease && 'beta' || 'release' }}
+          loaders: fabric
+          game-versions: "26.2"
+          files: release.mrpack
