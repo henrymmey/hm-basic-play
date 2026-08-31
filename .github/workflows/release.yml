@@ -23,7 +23,7 @@ jobs:
         run: packwiz modrinth export -o release.mrpack
 
       - name: Upload to Modrinth
-        uses: modrinth/minotaur@v2
+        uses: modrinth/minotaur@v2.9.0
         with:
           token: ${{ secrets.MODRINTH_TOKEN }}
           project-id: "kUYTdD3h"
