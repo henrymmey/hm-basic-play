@@ -11,3 +11,6 @@ hash = "f91c409d4ce68d027ac0a11b6d2828c5f6d057e749ff0ce596f3a84a65fc1e3905b08f4d
 [update.modrinth]
 mod-id = "g96Z4WVZ"
 version = "JmPs4Wie"
+[update.curseforge]
+file-id = 8260341
+project-id = 949555

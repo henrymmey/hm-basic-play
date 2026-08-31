@@ -11,3 +11,6 @@ hash = "b324e2dc2503a28351ff954a2147a640e7d906c672b45dbdded401467f0f5fb8e5137390
 [update.modrinth]
 mod-id = "kYuIpRLv"
 version = "cp2elfPy"
+[update.curseforge]
+file-id = 8294893
+project-id = 521594

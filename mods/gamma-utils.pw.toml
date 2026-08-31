@@ -11,3 +11,6 @@ hash = "5bca981ba885e7662ab5a400d8bb585b62215c10ed4fe09922578d767241a63c5e22dbd3
 [update.modrinth]
 mod-id = "wdLuzzEP"
 version = "bR4tEPFq"
+[update.curseforge]
+file-id = 8514509
+project-id = 492295
