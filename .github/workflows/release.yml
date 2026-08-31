@@ -1,0 +1,34 @@
+name: Build & Release Modpack
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+
+      - name: Install Packwiz
+        run: go install github.com/packwiz/packwiz@latest
+
+      - name: Build Modrinth Package (.mrpack)
+        run: packwiz modrinth export -o release.mrpack
+
+      - name: Upload to Modrinth
+        uses: Kirstein/modrinth-upload@v1.2
+        with:
+          token: ${{ secrets.MODRINTH_TOKEN }}
+          project-id: "DEINE_MODRINTH_PROJECT_ID" # Zu finden in den Projekt-Einstellungen auf Modrinth
+          version-number: ${{ github.event.release.tag_name }}
+          version-name: "Release ${{ github.event.release.tag_name }}"
+          file: release.mrpack
+          game-versions: "26.2" # Unterstützte MC-Version
+          loaders: "fabric" # Unterstützter Loader
