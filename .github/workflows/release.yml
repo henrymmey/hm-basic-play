@@ -4,6 +4,9 @@ on:
   release:
     types: [published]
 
+permissions:
+  contents: write # nötig, um Dateien an den Release anzuhängen
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -22,14 +25,34 @@ jobs:
       - name: Build Modrinth Package (.mrpack)
         run: packwiz modrinth export -o release.mrpack
 
-      - name: Upload to Modrinth
+      - name: Build CurseForge Package (.zip)
+        run: packwiz curseforge export -o release-curseforge.zip
+
+      - name: Upload to Modrinth & CurseForge
         uses: Kira-NT/mc-publish@v3
         with:
+          # === Modrinth ===
           modrinth-id: kUYTdD3h
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+          modrinth-files: release.mrpack
+
+          # === CurseForge ===
+          curseforge-id: 1352468
+          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+          curseforge-files: release-curseforge.zip
+
+          # === Gemeinsame Einstellungen ===
           name: ${{ github.event.release.name }}
           version: ${{ github.event.release.tag_name }}
           version-type: ${{ github.event.release.prerelease && 'beta' || 'release' }}
           loaders: fabric
           game-versions: "26.2"
-          files: release.mrpack
+
+      - name: Attach files to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            release.mrpack
+            release-curseforge.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
