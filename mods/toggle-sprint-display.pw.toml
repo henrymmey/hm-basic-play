@@ -1,0 +1,13 @@
+name = "Toggle Sprint Display"
+filename = "toggle-sprint-display-2.0.2.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/shVMaevq/versions/RfqFKdEm/toggle-sprint-display-2.0.2.jar"
+hash-format = "sha512"
+hash = "0632a96265a3ea08aaae49b6680a1ecf9559e708fce8227c2b2fb309cd6204e101dfab82014b61a556d80bd617866315b1586662cf06ddc486cbc6793dfc5b15"
+
+[update]
+[update.modrinth]
+mod-id = "shVMaevq"
+version = "RfqFKdEm"
