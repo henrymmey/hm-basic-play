@@ -1,18 +1,22 @@
 # HM Basic Play
 
-A client-side Fabric modpack for Minecraft 26.2 focused on performance optimization, quality-of-life improvements, and visual enhancements. Managed with [packwiz](https://packwiz.tools/) and automatically published to [Modrinth](https://modrinth.com/).
+[![Static Badge](https://img.shields.io/badge/GitHub-black?logo=github)](https://github.com/henrymmey)
+[![Static Badge](https://img.shields.io/badge/Website-henrymeyer.de/gaming-green)](https://henrymeyer.de/gaming)
+
+---
+
+This modpack aims to improve the Vanilla Minecraft experience through small optimizations and tweaks.
+
+It was developed to be compatible with the rules of most common servers. However, it remains your responsibility to verify the permitted mods for each specific server.
+
+---
 
 ## Features
 
-- **Performance** — Sodium, Lithium, Iris, FerriteCore, C2ME, Entity Culling, and more
-- **Visuals** — Complementary Reimagined/Unbound shaders, 3D skin layers, custom ore resource packs
-- **Quality of Life** — BetterF3, Zoomify, Dynamic Crosshair, Simple Voice Chat, Mod Menu integration
-- **Privacy** — No Chat Reports
-- **Cross-version support** — ViaFabricPlus
-
-## Installation
-
-Download the latest `.mrpack` from [Modrinth](https://modrinth.com/modpack/kUYTdD3h), then open it with the Modrinth App or any launcher that supports `.mrpack` files.
+* **Small Optimizations:** Built on the latest Fabric loader with essential mods like Sodium, Lithium, and FerriteCore.
+* **Quality of Life:** Small enhancements like dynamic crosshairs and better UI handling.
+* **Visual Improvements:** Mods like Iris Shaders and 3D Skin Layers for a more modern look.
+* **Vanilla-Friendly:** No gameplay changes. It’s the Minecraft you know.
 
 ## Development
 
@@ -43,9 +47,9 @@ mods/            — Mod metadata (.pw.toml files)
 resourcepacks/   — Resource pack metadata
 shaderpacks/     — Shader pack metadata
 config/          — Mod configuration files
-options.txt      — Default Minecraft client options
+pack.toml        — Modpack metadata (name, version, loaders)
 ```
 
 ## Release
 
-Releases are built and published to Modrinth automatically via GitHub Actions when a GitHub Release is published. The workflow exports the pack using `packwiz modrinth export` and uploads the resulting `.mrpack` to Modrinth.
+Create a release with proper Tags and Name. Everything should be published automatically.
