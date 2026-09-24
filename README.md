@@ -37,7 +37,7 @@ packwiz remove <mod-slug>
 packwiz update --all
 
 # Export for Modrinth
-VERSION=26.3-1.0.0
+VERSION=26.3-1.1.0
 cd platforms/modrinth
 packwiz modrinth export -o ../../hm-basic-play-${VERSION}.mrpack
 

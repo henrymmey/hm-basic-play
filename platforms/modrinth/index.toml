@@ -6,7 +6,7 @@ hash = "fd5c63bd0bc62403d1f47fd9315af36c091563202195bbe068e5993d7a35dad5"
 
 [[files]]
 file = "README.md"
-hash = "2b9da8d337dacecc53a6fc62c2cbc5c61dbb2693759365cea861033c366da44d"
+hash = "212bc920fc16faa601a4b075f8a93bce7d9c6ef7f94ecd255db6e61cb411e355"
 
 [[files]]
 file = "config/dynamiccrosshair.json5"
@@ -49,11 +49,6 @@ metafile = true
 [[files]]
 file = "mods/cloth-config.pw.toml"
 hash = "2b9727522c90a979eb9671ad7c5421443d91391b0697d1772146e6bfa19cb3c1"
-metafile = true
-
-[[files]]
-file = "mods/cubes-without-borders.pw.toml"
-hash = "2adfa32ac98176449b1a1cd42112ea324cf13e17efd16939c1ee91fe0523251f"
 metafile = true
 
 [[files]]
@@ -114,11 +109,6 @@ metafile = true
 [[files]]
 file = "mods/moreculling.pw.toml"
 hash = "f32ebeb468312cf555bd84d09c1a3a6e6f9ed992e4afc3ce9620aca571490806"
-metafile = true
-
-[[files]]
-file = "mods/no-chat-reports.pw.toml"
-hash = "24f4f2bd3fe74db7d61698f68075bccb1e1063aa38f157f436b2eb4af989b2c0"
 metafile = true
 
 [[files]]

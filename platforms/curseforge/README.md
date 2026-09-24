@@ -37,7 +37,7 @@ packwiz remove <mod-slug>
 packwiz update --all
 
 # Export for distribution
-VERSION=26.3-1.0.0
+VERSION=26.3-1.1.0
 packwiz curseforge export -o ../../hm-basic-play-${VERSION}.zip
 ```
 

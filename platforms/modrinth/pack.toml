@@ -1,12 +1,12 @@
 name = "HM Basic Play"
 author = "henrymmey"
-version = "26.3-1.0.0"
+version = "26.3-1.1.0"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "6766b7a0597b41d40dedaf30df04e5a8302083953bea2856148963e915270297"
+hash = "ecbdfe6520a6f8d8582d41a53652832f671d70c2e682cde989fbdbb57a0141bd"
 
 [versions]
 fabric = "0.19.5"
