@@ -6,7 +6,7 @@ hash = "fd5c63bd0bc62403d1f47fd9315af36c091563202195bbe068e5993d7a35dad5"
 
 [[files]]
 file = "README.md"
-hash = "9e3c9c0900b0232844498e347f5e214f7f00fee8cf268d0adcf7d9ef54ea265f"
+hash = "34e6e71db9ffb9816f24c07c6f67e15ca106a8604baf3cdb0e54d17bda474a29"
 
 [[files]]
 file = "config/dynamiccrosshair.json5"
@@ -19,11 +19,6 @@ hash = "aeb7abf453509be88b61251f7e65dba0d4088fd84b5aa2a0c3a3713f1dbb8d05"
 [[files]]
 file = "mods/badoptimizations.pw.toml"
 hash = "e9dae46a0b8c7af1c2d778118219ca4fd7e159ee200bb813e1e9da0c0f4441c2"
-metafile = true
-
-[[files]]
-file = "mods/betterf3.pw.toml"
-hash = "511a7689ceb50e3cfc5e6251ce5e14ed5497a5cb95fbeeda77328be3cfd573d7"
 metafile = true
 
 [[files]]
