@@ -22,11 +22,16 @@ jobs:
       - name: Install Packwiz
         run: go install github.com/packwiz/packwiz@latest
 
+      - name: Verify platform content parity
+        run: bash .github/scripts/check-platform-parity.sh
+
       - name: Build Modrinth Package (.mrpack)
-        run: packwiz modrinth export -o release.mrpack
+        working-directory: platforms/modrinth
+        run: packwiz modrinth export -o ../../release.mrpack
 
       - name: Build CurseForge Package (.zip)
-        run: packwiz curseforge export -o release-curseforge.zip
+        working-directory: platforms/curseforge
+        run: packwiz curseforge export -o ../../release-curseforge.zip
 
       - name: Upload to Modrinth & CurseForge
         uses: Kira-NT/mc-publish@v3
@@ -46,7 +51,7 @@ jobs:
           version: ${{ github.event.release.tag_name }}
           version-type: ${{ github.event.release.prerelease && 'beta' || 'release' }}
           loaders: fabric
-          game-versions: "26.2"
+          game-versions: "26.3"
 
       - name: Attach files to GitHub Release
         uses: softprops/action-gh-release@v2

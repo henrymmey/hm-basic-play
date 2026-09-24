@@ -1,0 +1,13 @@
+name = "HM Basic Play"
+author = "henrymmey"
+version = "26.3-2.1.3"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "514ecb9cbed0a9dd7e57df4d42f51de8e42c2b6857292acd457432baa432ec20"
+
+[versions]
+fabric = "0.19.5"
+minecraft = "26.3"

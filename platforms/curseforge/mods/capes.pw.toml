@@ -1,0 +1,13 @@
+name = "Fabric Capes"
+filename = "capes-1.5.10+26.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "87e14543620887cab4f055ad8d033c165b9fc5b8"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8892793
+project-id = 408481

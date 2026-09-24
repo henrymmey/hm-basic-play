@@ -13,10 +13,10 @@ It was developed to be compatible with the rules of most common servers. However
 
 ## Features
 
-- **Small Optimizations:** Built on the latest Fabric loader with essential mods like Sodium, Lithium, and FerriteCore.
-- **Quality of Life:** Small enhancements like dynamic crosshairs and better UI handling.
-- **Visual Improvements:** Mods like Iris Shaders and 3D Skin Layers for a more modern look.
-- **Vanilla-Friendly:** No gameplay changes. It’s the Minecraft you know.
+* **Small Optimizations:** Built on the latest Fabric loader with essential mods like Sodium, Lithium, and FerriteCore.
+* **Quality of Life:** Small enhancements like dynamic crosshairs and better UI handling.
+* **Visual Improvements:** Mods like Iris Shaders and 3D Skin Layers for a more modern look.
+* **Vanilla-Friendly:** No gameplay changes. It’s the Minecraft you know.
 
 ## Development
 
@@ -36,21 +36,18 @@ packwiz remove <mod-slug>
 # Update all mods
 packwiz update --all
 
-# Export for Modrinth
-cd platforms/modrinth
-packwiz modrinth export -o ../../release.mrpack
-
-# Export for CurseForge
-cd ../curseforge
-packwiz curseforge export -o ../../release-curseforge.zip
+# Export for distribution
+packwiz modrinth export -o release.mrpack
 ```
 
 ### Project Structure
 
 ```
-platforms/modrinth/    — Modrinth Packwiz root
-platforms/curseforge/  — CurseForge Packwiz root
-.github/workflows/     — Automated platform-specific release exports
+mods/            — Mod metadata (.pw.toml files)
+resourcepacks/   — Resource pack metadata
+shaderpacks/     — Shader pack metadata
+config/          — Mod configuration files
+pack.toml        — Modpack metadata (name, version, loaders)
 ```
 
 ## Release
