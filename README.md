@@ -37,12 +37,13 @@ packwiz remove <mod-slug>
 packwiz update --all
 
 # Export for Modrinth
+VERSION=26.3-1.0.0
 cd platforms/modrinth
-packwiz modrinth export -o ../../release.mrpack
+packwiz modrinth export -o ../../hm-basic-play-${VERSION}.mrpack
 
 # Export for CurseForge
 cd ../curseforge
-packwiz curseforge export -o ../../release-curseforge.zip
+packwiz curseforge export -o ../../hm-basic-play-${VERSION}.zip
 ```
 
 ### Project Structure

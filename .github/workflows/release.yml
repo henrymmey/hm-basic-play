@@ -27,11 +27,11 @@ jobs:
 
       - name: Build Modrinth Package (.mrpack)
         working-directory: platforms/modrinth
-        run: packwiz modrinth export -o ../../release.mrpack
+        run: packwiz modrinth export -o ../../hm-basic-play-${{ github.event.release.tag_name }}.mrpack
 
       - name: Build CurseForge Package (.zip)
         working-directory: platforms/curseforge
-        run: packwiz curseforge export -o ../../release-curseforge.zip
+        run: packwiz curseforge export -o ../../hm-basic-play-${{ github.event.release.tag_name }}.zip
 
       - name: Upload to Modrinth & CurseForge
         uses: Kira-NT/mc-publish@v3
@@ -39,12 +39,12 @@ jobs:
           # === Modrinth ===
           modrinth-id: kUYTdD3h
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
-          modrinth-files: release.mrpack
+          modrinth-files: hm-basic-play-${{ github.event.release.tag_name }}.mrpack
 
           # === CurseForge ===
           curseforge-id: 1352468
           curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
-          curseforge-files: release-curseforge.zip
+          curseforge-files: hm-basic-play-${{ github.event.release.tag_name }}.zip
 
           # === Gemeinsame Einstellungen ===
           name: ${{ github.event.release.name }}
@@ -57,7 +57,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            release.mrpack
-            release-curseforge.zip
+            hm-basic-play-${{ github.event.release.tag_name }}.mrpack
+            hm-basic-play-${{ github.event.release.tag_name }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

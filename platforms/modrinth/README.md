@@ -13,10 +13,10 @@ It was developed to be compatible with the rules of most common servers. However
 
 ## Features
 
-* **Small Optimizations:** Built on the latest Fabric loader with essential mods like Sodium, Lithium, and FerriteCore.
-* **Quality of Life:** Small enhancements like dynamic crosshairs and better UI handling.
-* **Visual Improvements:** Mods like Iris Shaders and 3D Skin Layers for a more modern look.
-* **Vanilla-Friendly:** No gameplay changes. It’s the Minecraft you know.
+- **Small Optimizations:** Built on the latest Fabric loader with essential mods like Sodium, Lithium, and FerriteCore.
+- **Quality of Life:** Small enhancements like dynamic crosshairs and better UI handling.
+- **Visual Improvements:** Mods like Iris Shaders and 3D Skin Layers for a more modern look.
+- **Vanilla-Friendly:** No gameplay changes. It’s the Minecraft you know.
 
 ## Development
 
@@ -37,7 +37,8 @@ packwiz remove <mod-slug>
 packwiz update --all
 
 # Export for distribution
-packwiz modrinth export -o release.mrpack
+VERSION=26.3-1.0.0
+packwiz modrinth export -o ../../hm-basic-play-${VERSION}.mrpack
 ```
 
 ### Project Structure
